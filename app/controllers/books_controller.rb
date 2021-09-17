@@ -47,9 +47,9 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :bod)
+    params.require(:book).permit(:title, :body)
   end
-  
+
   def ensure_correct_user
     @book = Book.find(params[:id])
     @user = @book.user
